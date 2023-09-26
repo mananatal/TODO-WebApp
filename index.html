@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todos</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.google.com/specimen/Racing+Sans+One"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/toastify-js/1.6.1/toastify.css"
+      integrity="sha512-VSD3lcSci0foeRFRHWdYX4FaLvec89irh5+QAGc00j5AOdow2r5MFPhoPEYBUQdyarXwbzyJEO7Iko7+PnPuBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/toastify-js/1.6.1/toastify.js"
+      integrity="sha512-MnKz2SbnWiXJ/e0lSfSzjaz9JjJXQNb2iykcZkEY2WOzgJIWVqJBFIIPidlCjak0iTH2bt2u1fHQ4pvKvBYy6Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <div class="Header">
+          <div class="line1"></div>
+          <div class="to-do-now">TO-DO NOW</div>
+          <div class="line1"></div>
+        </div>
+
+        <div class="head">
+          <div class="line2"></div>
+          <div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="33"
+              height="33"
+              viewBox="0 0 33 33"
+              fill="none"
+            >
+              <path
+                d="M16.5135 20.4265H12.5135V16.4265L24.5135 4.42651L28.5135 8.42651L16.5135 20.4265Z"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M21.5135 7.42651L25.5135 11.4265"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M27.5135 15.4265V26.4265C27.5135 26.6917 27.4082 26.9461 27.2206 27.1336C27.0331 27.3212 26.7787 27.4265 26.5135 27.4265H6.51352C6.2483 27.4265 5.99395 27.3212 5.80641 27.1336C5.61888 26.9461 5.51352 26.6917 5.51352 26.4265V6.42651C5.51352 6.1613 5.61888 5.90694 5.80641 5.71941C5.99395 5.53187 6.2483 5.42651 6.51352 5.42651H17.5135"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+          <div class="line2"></div>
+        </div>
+      </header>
+
+      <div class="main">
+        <div class="add-task">
+          <div class="task-input">
+            <form class="add-task-form">
+              <input
+                type="text"
+                placeholder="Enter Task Here"
+                id="input-task"
+              />
+              <button type="submit" class="add-task-button">Add Task</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="line3"></div>
+
+        <div class="task-container"></div>
+
+        <div class="modal">
+          
+          <div class="modalHeader">
+            <h1>Update Task</h1>
+            <div>
+              <i onclick="closeModal()" class="fa-solid fa-xmark close"></i>
+            </div>
+          </div>
+    
+            <div class="update-input">
+                <input type="text" placeholder="Update Task Here" id="update-input-field" >
+            </div>
+
+            <div class="cncl-update-btn-cntr">
+              <button class="btn cncl-btn" onclick="closeModal()">Cancel</button>
+              <button class="btn update-btn">Update</button>
+            </div>
+         
+        </div>
+
+
+      </div>
+    </div>
+
+    <div class="overlay" onclick="closeModal()"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

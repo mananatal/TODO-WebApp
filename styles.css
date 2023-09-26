@@ -1,0 +1,320 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap');
+
+body{
+    overflow-x: hidden;
+    background-color: #2C2C2C;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+    
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: transparent; 
+  }
+   
+  body::-webkit-scrollbar-thumb {
+    background: transparent;
+  }
+  
+  body:hover::-webkit-scrollbar-thumb {
+    background: #4A4A4A; 
+  } 
+  
+  
+
+.wrapper{
+    /* height: 100vh; */
+    width: 100vw;
+    background-color: #2C2C2C;
+    /* position: relative; */
+}
+
+.Header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding-top: 3rem;
+}
+
+.to-do-now{
+    color: var(--light, #FFF);
+    font-family: 'Racing Sans One', cursive;
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    text-transform: capitalize;
+   
+}
+
+.line1{
+    width: 3.125rem;
+    height: 0.125rem;
+    background-color: #FFF;
+}
+
+.line2{
+    width: 15rem;
+    height: 0.125rem;
+    background-color: #FFF;
+}
+
+.line3{
+    width: 60.38863rem;
+    height: 0.0625rem;
+    background-color: #FFF;
+    margin: 0 auto;
+    position: relative;
+    top: 2rem;
+}
+
+.head{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.add-task{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 3rem;
+   
+}
+
+.add-task-button{
+    border: none;
+    width: 8.91788rem;
+    height: 4.08988rem;
+    border-radius: 1.25rem;
+    background: #4F4F4F;
+    color: #FFF;
+    font-family: 'Racing Sans One', cursive;
+    font-size: 1.5625rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: absolute;
+    left: 45rem;
+    cursor: pointer;
+}
+
+#input-task{
+    all: unset;
+    border: none;
+    width: 51.62713rem;
+    height: 2.08988rem;
+    border-radius: 1.25rem;
+    background: #D9D9D9;
+    font-size: 2rem;
+    padding: 1rem;
+    font-family: 'Racing Sans One', cursive;
+}
+
+.task-input{
+    display: flex;
+    position: relative;
+    
+}
+
+input::placeholder {
+    font-size: 2rem;
+    position: absolute;
+    left: 1rem;
+    font-family: 'Racing Sans One', cursive;
+}
+
+
+
+.task-container{
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    /* max-height: 21rem; */
+    gap: 1rem;
+    justify-content:center;
+    align-items: center;
+    /* overflow-y: scroll; */
+    /* padding-top: 3.5rem; */
+    
+}
+
+/* sample */
+ .task-container::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  .task-container::-webkit-scrollbar-track {
+    background: transparent; 
+  }
+   
+  .task-container::-webkit-scrollbar-thumb {
+    background: transparent;
+  }
+  
+  .task-container:hover::-webkit-scrollbar-thumb {
+    background: #4A4A4A; 
+  } 
+  
+  
+  
+  /* sample ends */
+
+
+
+.task{
+    width: 51.375rem;
+    height: 2.375rem;
+    border-radius: 0.625rem;
+    background: #222;
+    display: flex;
+    align-items: center;
+    padding: .5rem;
+    color: #FFF;
+    font-size: 1.1875rem;
+    font-weight: 400;
+    position: relative;
+}
+
+.task-delete-btn-container{
+    display: flex;
+    position: relative;
+    
+}
+
+.del-btn{
+    all: unset;
+    position: absolute;
+    right: -1rem;
+    cursor: pointer;
+}
+
+
+.icons{
+    display: none;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    cursor: pointer;
+    position: absolute;
+    right: 2.5rem;
+}
+
+.task:hover .icons{
+    display: flex;
+}
+
+
+
+.modal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    color: #ffffff;
+    translate: -50% -50%;
+    border: 2px solid #ffffff59;
+    width: 500px;
+    scale: 0;
+    background: #00000088;
+    padding: 20px 25px;
+    border-radius: 20px;
+    transition: 0.5s ease-in-out;
+    backdrop-filter: blur(10px);
+    z-index: 1;
+ }
+
+ .modalHeader{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #ffffff88;
+ }
+
+ .modalHeader div i {
+    font-size: 30px;
+    cursor: pointer;
+ }
+
+ #update-input-field{
+    all: unset;
+    border: none;
+    width: 90%;
+    height: 2.08988rem;
+    border-radius: 1.25rem;
+    background: #D9D9D9;
+    font-size: 2rem;
+    padding: 1rem;
+    font-family: 'Racing Sans One', cursive;
+    margin-bottom: 12px;
+    color: #222;
+ }
+
+
+
+ .update-input{
+    margin-bottom: 25px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #ffffff88;
+ }
+
+.cncl-update-btn-cntr{
+    display: flex;
+    gap: 1rem;
+    justify-content: end;
+}
+
+ .btn{
+    border: none;
+    width: 8.91788rem;
+    height: 4.08988rem;
+    border-radius: 1.25rem;
+    color: #FFF;
+    font-family: 'Racing Sans One', cursive;
+    font-size: 1.5625rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    
+    cursor: pointer;
+ }
+
+ .cncl-btn{
+    background:#F44336;
+ }
+
+ .update-btn{
+    background: #4CAF50;
+ }
+
+ .overlay {
+    position: fixed;
+    background-color: #5f5f5f83;
+    top: 0;
+    opacity: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+    transition: 0.5s ease-in-out;
+  }
+  .overlayActive {
+    opacity: 1;
+    pointer-events: initial;
+  }
+
+  .active {
+    scale: 1;
+  }
